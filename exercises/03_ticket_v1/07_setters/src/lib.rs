@@ -3,8 +3,6 @@
 //   Even better, extract that logic and reuse it in both places. You can use
 //   private functions or private static methods for that.
 
-use std::os::linux::raw::stat;
-
 pub struct Ticket {
     title: String,
     description: String,
