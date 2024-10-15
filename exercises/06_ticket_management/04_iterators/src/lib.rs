@@ -1,3 +1,5 @@
+use std::any::Any;
+use std::option::IntoIter;
 use ticket_fields::{TicketDescription, TicketTitle};
 
 // TODO: Let's start sketching our ticket store!
@@ -36,6 +38,14 @@ impl TicketStore {
     }
 }
 
+impl IntoIterator for TicketStore {
+    type Item = Ticket;
+    type IntoIter = std::vec::IntoIter<Self::Item>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.tickets.into_iter()
+    }
+}
 #[cfg(test)]
 mod tests {
     use super::*;
