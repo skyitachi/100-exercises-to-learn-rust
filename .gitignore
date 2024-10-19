@@ -2,3 +2,4 @@ target/
 exercises/progress.db
 .idea
 .DS_Store
+.vscode
