@@ -38,6 +38,7 @@ fn insert_works() {
         .recv()
         .expect("No response received!")
         .unwrap();
+    
     assert_eq!(ticket_id, ticket.id);
     assert_eq!(ticket.status, Status::ToDo);
     assert_eq!(ticket.title, draft.title);
